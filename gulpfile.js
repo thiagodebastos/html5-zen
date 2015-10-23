@@ -14,6 +14,7 @@ var svgo         = require('imagemin-svgo');
 var gifsicle     = require('imagemin-gifsicle');
 var jpegtran     = require('imagemin-jpegtran');
 var browserSync  = require('browser-sync');
+var plumber      = require('gulp-plumber');
 
 // file source and destination variables
 
@@ -38,6 +39,12 @@ var jsVendorDest = 'build/js/vendor';
 // Name of ready-to-upload archive
 var zipName = 'archive.zip'
 
+// Handle errors
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
 // Static Server + watching stylus/html/js/image files
 gulp.task('serve', ['html', 'images', 'scripts', 'scripts-vendor', 'css'], function() {
 
@@ -46,7 +53,7 @@ gulp.task('serve', ['html', 'images', 'scripts', 'scripts-vendor', 'css'], funct
   });
 
   gulp.watch("source/img/*", ['images']);
-  gulp.watch("source/stylus/*.styl", ['css']);
+  gulp.watch("source/stylus/**/*.styl", ['css']);
   gulp.watch("source/*.html", ['html']);
   gulp.watch("source/js/*.js", ['scripts']);
   gulp.watch("source/js/vendor/*.js", ['scripts-vendor']);
@@ -55,13 +62,14 @@ gulp.task('serve', ['html', 'images', 'scripts', 'scripts-vendor', 'css'], funct
 // Compile Stylus into CSS, add vendor prefixes & auto-inject into browser
 gulp.task('css', function() {
   return gulp.src(cssSrc)
+    .pipe(plumber({ errorHandler: handleError }))
     .pipe(newer(cssDest))
     .pipe(stylus({
       compress: false,
       paths: ['source/stylus']
     }))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'ie 8', 'ie 9']
+      browsers: ['last 4 versions', 'ie 8', 'ie 9']
     }))
     .pipe(rename('master.css'))
     .pipe(gulp.dest(cssDest))
