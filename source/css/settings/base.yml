@@ -1,0 +1,32 @@
+# fonts
+font:
+  header : "'Helvetica', sans-serif"
+  body : "Georgia, serif"
+
+# material colour palette
+palette:
+  hue1: '#03A9F4'
+  hue2: '#0288D1'
+  hue3: '#AD1457'
+  accent: '#FF4081'
+
+
+# text opacity based on importance
+copy:
+  dark:
+    colour: black
+    primary: 0.87
+    secondary: 0.54
+    hint: 0.38
+    divider: 0.12
+  light:
+      colour: white
+      primary: 1
+      secondary: 0.7
+      hint: 0.5
+      divider: 0.12
+
+# section colours
+background:
+  hero: palette.hue1
+  footer: darken(palette.accent, 5%)

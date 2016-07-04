@@ -1,0 +1,18 @@
+image: node:6.2.1
+
+pages:
+  cache:
+    paths:
+    - node_modules/
+  stage: deploy
+  script:
+  - npm install
+  - npm run build
+  - mkdir .public
+  - cp -r build/* .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

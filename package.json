@@ -1,35 +1,59 @@
 {
-  "name": "html5-zen",
-  "version": "0.0.1",
-  "description": "A simple starter template for working with Stylus",
+  "name": "fcc-wikipedia-viewer-app",
+  "version": "1.0.0",
+  "description": "A wikipedia viewer app, part of the Frontend Developer Intermediate Projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "keywords": [
-    "stylus",
-    "boilerplate",
+    "css",
     "html5",
-    "workflow"
+    "css3",
+    "es6"
   ],
   "author": "Thiago de Bastos",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-preset-es2015": "^6.5.0",
     "browser-sync": "^2.9.7",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.0.2",
+    "cssnano": "^3.7.1",
+    "del": "^2.0.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
+    "gulp-data": "^1.2.0",
     "gulp-imagemin": "^2.3.0",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-newer": "^0.5.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-newer": "^0.5.2",
     "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-pug": "^3.0.3",
     "gulp-rename": "^1.2.2",
-    "gulp-stylus": "^2.0.7",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.5.0",
     "gulp-uglify": "^1.4.1",
     "gulp-zip": "^3.0.2",
     "imagemin-gifsicle": "^4.2.0",
     "imagemin-jpegtran": "^4.3.0",
     "imagemin-pngquant": "^4.2.0",
-    "imagemin-svgo": "^4.1.2"
+    "imagemin-svgo": "^4.1.2",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-cssnext": "^2.6.0",
+    "postcss-easings": "^0.3.0",
+    "postcss-import": "^8.1.2",
+    "postcss-map": "^0.8.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-reporter": "^1.3.3",
+    "postcss-url": "^5.1.2",
+    "run-sequence": "^1.1.4",
+    "rupture": "^0.6.1"
+  },
+  "dependencies": {
+    "normalize-styl": "^3.0.3"
   }
 }
