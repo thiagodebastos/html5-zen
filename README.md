@@ -1,7 +1,5 @@
-# [![HTML5 Zen](https://dl.dropboxusercontent.com/u/86789142/cdn/banner-zen/banner-zen-hero_gitlab.png)](https://gitlab.mcsaatchi.com.au/MAKE/banner-zen/repository/archive.zip)
-
 ## Overview
-**HTML5 Zen** is a HTML5 Starter Kit is a somewhat opinionated work-in-progress boilerplate for HTML5 Development that takes the stress out and peace in. Included are tools for building static HTML5 websites in the most relaxing, peaceful and heartwarming way possible. 
+**HTML5 Zen** is a HTML5 Starter Kit is a somewhat opinionated work-in-progress boilerplate for HTML5 Development that takes the stress out and peace in. Included are tools for building static HTML5 websites in the most relaxing, peaceful and heartwarming way possible.
 
 ### Features
 
@@ -44,7 +42,7 @@ And you are ready to go, run with `gulp` to start the built in HTTP server in a 
 ### Workflow
 - Put on some sound-blocking headphones, and switch to [3 Hours of Healing Zen Music](https://www.youtube.com/watch?v=LGiH6oUDXVg)
 -
--  
+-
 
 [I'm working on it!]
 
